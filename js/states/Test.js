@@ -18,7 +18,7 @@ Point.TestState = {
       {
           var rand = Math.floor(Math.random()*540)+60;
           
-          if(rand <250)
+          if(rand <200)
           {
               var newRand = Math.floor(Math.random()*200)+390;
           }
@@ -44,6 +44,7 @@ Point.TestState = {
                       //Create the 'prize'
                       this.chaos = this.game.make.sprite(0, 0, 'truckO');
                       this.bmd = this.game.make.bitmapData(600, 400);
+                      console.log(this.bmd);
 
                       this.game.add.sprite(50, 100, this.bmd)
 
@@ -64,6 +65,6 @@ Point.TestState = {
         //'Alpha-ize' the area covered by the scratch
         //Clear the instruction data
         this.bmd.alphaMask(this.chaos, this.rag);
-        console.log(this.chaos);
+        console.log(this.bmd);
     }
 }
