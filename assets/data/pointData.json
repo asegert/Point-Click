@@ -1,0 +1,1877 @@
+{
+  "levels": [
+    {
+      "level": 0,
+      "rooms": [
+          {
+              "room": {
+                  "asset": "interior",
+                  "x": 50,
+                  "y": 200,
+                  "scaleX": 1,
+                  "scaleY": 1,
+                  "index": 1
+              },
+              "buttons": [
+                            {"name": "phone", 
+                             "completed": false, 
+                             "clickText": null, 
+                             "clickTextComplete": "You found a phone",
+                             "change": [null],
+                             "actions": ["phoneActive"],
+                             "x": 120,
+                             "y": 450,
+                             "scaleX": 0.45,
+                             "scaleY": 0.45,
+                             "rotation": -0.3,
+                             "asset": "button",
+                             "sound": null,
+                             "reset": null,
+                             "call": [null]
+                            },
+                            {"name": "wheel", 
+                             "completed": false, 
+                             "clickText": null, 
+                             "clickTextComplete": "honk",
+                             "change": [null],
+                             "actions": [null],
+                             "x": 160,
+                             "y": 230,
+                             "scaleX": 0.7,
+                             "scaleY": 1,
+                             "rotation": 0,
+                             "asset": "button",
+                             "sound": "honk",
+                             "reset": null,
+                             "call": [null]
+                            },
+                            {"name": "keyButton", 
+                             "completed": false, 
+                             "clickText": "You can't leave without a key", 
+                             "clickTextComplete": "You found the key, unlock a vehicle",
+                             "change": ["phone"],
+                             "actions": ["key1"],
+                             "x": 420,
+                             "y": 310,
+                             "scaleX": 0.6,
+                             "scaleY": 0.5,
+                             "rotation": 0,
+                             "asset": "button",
+                             "sound": "key",
+                             "reset": null,
+                             "call": [null]
+                            }
+                        ],
+              "items": [  
+                          {
+                             "name": "phone",
+                             "inInventory": false,
+                             "isSelected": false,
+                             "isCombined": false,
+                             "uses": [
+                                 {
+                                     "asset": "phoneActive",
+                                     "combine": null,
+                                     "ordered":true
+                                 }
+                             ]
+                          }, 
+                          {
+                             "name": "key",
+                             "inInventory": false,
+                             "isSelected": false,
+                             "isCombined": false,
+                             "uses": [
+                                 {
+                                     "asset": "key1",
+                                     "combine": null,
+                                     "ordered":true
+                                 }
+                             ]
+                          }
+                       ]
+          },
+          {
+              "room": {
+                  "asset": "trunk",
+                  "x": 50,
+                  "y": 200,
+                  "scaleX": 1,
+                  "scaleY": 1,
+                  "index": 2
+              },
+              "buttons": [
+                            {"name": "lock", 
+                             "completed": false, 
+                             "clickText": null, 
+                             "clickTextComplete": "beep beep",
+                             "change": [null],
+                             "actions": [null],
+                             "x": 325,
+                             "y": 530,
+                             "scaleX": 0.2,
+                             "scaleY": 0.1,
+                             "rotation": 0,
+                             "asset": "button",
+                             "sound": "trunk",
+                             "reset": null,
+                             "call": [null]
+                            }, 
+                            {"name": "knife", 
+                             "completed": false, 
+                             "clickText": null, 
+                             "clickTextComplete": "You found a knife",
+                             "change": [null],
+                             "actions": ["exactoKnife"],
+                             "x": 60,
+                             "y": 330,
+                             "scaleX": 0.3,
+                             "scaleY": 0.2,
+                             "rotation": -0.7,
+                             "asset": "button",
+                             "sound": "tear",
+                             "reset": null,
+                             "call": [null]
+                            },
+                            {"name": "keyVent", 
+                             "completed": false, 
+                             "clickText": "It's stuck", 
+                             "clickTextComplete": "You found the key, unlock a vehicle",
+                             "change": ["knife"],
+                             "actions": ["key1"],
+                             "x": 580,
+                             "y": 370,
+                             "scaleX": 0.2,
+                             "scaleY": 0.25,
+                             "rotation": 0.4,
+                             "asset": "button",
+                             "sound": "key",
+                             "reset": null,
+                             "call": [null]
+                            }
+                        ],
+              "items": [
+                          {
+                             "name": "knife",
+                             "inInventory": false,
+                             "isSelected": false,
+                             "isCombined": false,
+                             "uses": [
+                                 {
+                                     "asset": "exactoKnife",
+                                     "combine": null,
+                                     "ordered":true
+                                 }
+                             ]
+                          },
+                          {
+                             "name": "key",
+                             "inInventory": false,
+                             "isSelected": false,
+                             "isCombined": false,
+                             "uses": [
+                                 {
+                                     "asset": "key1",
+                                     "combine": null,
+                                     "ordered":true
+                                 }
+                             ]
+                          }
+                       ]
+          },
+          {
+              "room": {
+                  "asset": "backseat",
+                  "x": 50,
+                  "y": 200,
+                  "scaleX": 1,
+                  "scaleY": 1,
+                  "index": 3
+              },
+              "buttons": [
+                            {"name": "window", 
+                             "completed": false, 
+                             "clickText": null, 
+                             "clickTextComplete": "Hmm...a window",
+                             "change": [null],
+                             "actions": [null],
+                             "x": 500,
+                             "y": 210,
+                             "scaleX": 0.7,
+                             "scaleY": 0.7,
+                             "rotation": 0.25,
+                             "asset": "button",
+                             "sound": "window",
+                             "reset": null,
+                             "call": [null]
+                            }, 
+                            {"name": "greenbeaker", 
+                             "completed": false, 
+                             "clickText": null, 
+                             "clickTextComplete": "You found a cleaner",
+                             "change": [null],
+                             "actions": ["greenBeaker"],
+                             "x": 50,
+                             "y": 480,
+                             "scaleX": 0.2,
+                             "scaleY": 0.2,
+                             "rotation": 0,
+                             "asset": "button",
+                             "sound": null,
+                             "reset": null,
+                             "call": [null]
+                            },
+                            {"name": "stain", 
+                             "completed": false, 
+                             "clickText": "That's gross, you should clean it!", 
+                             "clickTextComplete": "You found the key, unlock a vehicle",
+                             "change": ["greenbeaker"],
+                             "actions": ["key2"],
+                             "x": 160,
+                             "y": 500,
+                             "scaleX": 0.01,
+                             "scaleY": 0.01,
+                             "rotation": 0,
+                             "asset": "goo",
+                             "sound": "cleaner",
+                             "reset": null,
+                             "call": [null]
+
+                            }
+                        ],
+              "items": [
+                          {
+                             "name": "greenbeaker",
+                             "inInventory": false,
+                             "isSelected": false,
+                             "isCombined": false,
+                             "uses": [
+                                 {
+                                     "asset": "greenBeaker",
+                                     "combine": null,
+                                     "ordered":true
+                                 }
+                             ]
+                          },
+                          {
+                             "name": "key",
+                             "inInventory": false,
+                             "isSelected": false,
+                             "isCombined": false,
+                             "uses": [
+                                 {
+                                     "asset": "key2",
+                                     "combine": null,
+                                     "ordered":false
+                                 }
+                             ]
+                          }
+                       ]
+          },
+          {
+              "room": {
+                  "asset": "outside",
+                  "x": 50,
+                  "y": 200,
+                  "scaleX": 1,
+                  "scaleY": 1,
+                  "index": 4
+              },
+              "buttons": [
+                            {"name": "lights", 
+                             "completed": false, 
+                             "clickText": "Why should I turn on the lights?", 
+                             "clickTextComplete": "I guess they work.",
+                             "change": [null],
+                             "actions": [null],
+                             "x": 110,
+                             "y": 450,
+                             "scaleX": 0.9,
+                             "scaleY": 0.25,
+                             "rotation": 0.1,
+                             "asset": "button",
+                             "sound": "lights",
+                             "reset": null,
+                             "call": ["state.blinkEffect", "outsideLights", 50, 200, 500, true, 3]
+                            },
+                            {"name": "rag", 
+                             "completed": false, 
+                             "clickText": null, 
+                             "clickTextComplete": "You found a rag",
+                             "change": [null],
+                             "actions": ["rag"],
+                             "x": 600,
+                             "y": 420,
+                             "scaleX": 0.2,
+                             "scaleY": 0.2,
+                             "rotation": 0,
+                             "asset": "button",
+                             "sound": "wrench",
+                             "reset": null,
+                             "call": [null]
+                            }, 
+                            {"name": "side", 
+                             "completed": false, 
+                             "clickText": "It's filthy", 
+                             "clickTextComplete": "Something fell",
+                             "change": ["rag"],
+                             "actions": ["this"],
+                             "x": 450,
+                             "y": 410,
+                             "scaleX": 0.2,
+                             "scaleY": 0.25,
+                             "rotation": 0,
+                             "asset": "washMe",
+                             "sound": "wipe",
+                             "reset": [
+                                 "side", 
+                                 false, 
+                                 null, 
+                                 "You found the key, unlock a vehicle",
+                                 [null],
+                                 ["key2"],
+                                 450,
+                                 510,
+                                 0.2,
+                                 0.25,
+                                 0,
+                                 "key2",
+                                 "key",
+                                 null,
+                                 [null]
+                             ],
+                             "call": [null]
+                            }
+                        ],
+              "items": [
+                          {
+                             "name": "side",
+                             "inInventory": false,
+                             "isSelected": false,
+                             "isCombined": false,
+                             "uses": [
+                                 {
+                                     "asset": "washMe",
+                                     "combine": "rag",
+                                     "ordered":true
+                                 },
+                                 {
+                                     "asset": null,
+                                     "combine": null,
+                                     "ordered":true
+                                 }
+                             ]
+                          },
+                          {
+                             "name": "rag",
+                             "inInventory": false,
+                             "isSelected": false,
+                             "isCombined": false,
+                             "uses": [
+                                 {
+                                     "asset": "rag",
+                                     "combine": null,
+                                     "ordered":true
+                                 }
+                             ]
+                          },
+                          {
+                             "name": "key",
+                             "inInventory": false,
+                             "isSelected": false,
+                             "isCombined": false,
+                             "uses": [
+                                 {
+                                     "asset": "key2",
+                                     "combine": null,
+                                     "ordered":true
+                                 }
+                             ]
+                          }
+                       ]
+
+          }
+      ]
+    },
+    {
+      "level": 1,
+      "rooms": [
+          {
+              "room": {
+                  "asset": "interior",
+                  "x": 50,
+                  "y": 200,
+                  "scaleX": 1,
+                  "scaleY": 1,
+                  "index": 1
+              },
+              "buttons": [
+                            {"name": "phone", 
+                             "completed": false, 
+                             "clickText": null, 
+                             "clickTextComplete": "You found a phone",
+                             "change": [null],
+                             "actions": ["phone"],
+                             "x": 120,
+                             "y": 450,
+                             "scaleX": 0.45,
+                             "scaleY": 0.45,
+                             "rotation": -0.3,
+                             "asset": "button",
+                             "sound": null,
+                             "reset": null,
+                             "call": [null]
+                            },
+                            {"name": "wheel", 
+                             "completed": false, 
+                             "clickText": null, 
+                             "clickTextComplete": "honk",
+                             "change": [null],
+                             "actions": [null],
+                             "x": 160,
+                             "y": 230,
+                             "scaleX": 0.7,
+                             "scaleY": 1,
+                             "rotation": 0,
+                             "asset": "button",
+                             "sound": "honk",
+                             "reset": null,
+                             "call": [null]
+                            },
+                            {"name": "ventCode", 
+                             "completed": false, 
+                             "clickText": null, 
+                             "clickTextComplete": "You found a pass code",
+                             "change": [null],
+                             "actions": ["code"],
+                             "x": 78,
+                             "y": 410,
+                             "scaleX": 0.3,
+                             "scaleY": 0.2,
+                             "rotation": -0.3,
+                             "asset": "button",
+                             "sound": "vent",
+                             "reset": null,
+                             "call": [null]
+                            },
+                            {"name": "keyButton", 
+                             "completed": false, 
+                             "clickText": "You can't leave without a key", 
+                             "clickTextComplete": "You found the key, unlock a vehicle",
+                             "change": ["phone", "code"],
+                             "actions": ["key1"],
+                             "x": 420,
+                             "y": 310,
+                             "scaleX": 0.6,
+                             "scaleY": 0.5,
+                             "rotation": 0,
+                             "asset": "button",
+                             "sound": "key",
+                             "reset": null,
+                             "call": [null]
+                            }
+                        ],
+              "items": [  
+                          {
+                             "name": "phone",
+                             "inInventory": false,
+                             "isSelected": false,
+                             "isCombined": false,
+                             "uses": [
+                                 {
+                                     "asset": "phone",
+                                     "combine": "code",
+                                     "ordered":true
+                                 },
+                                 {
+                                     "asset": "phoneActive",
+                                     "combine": null,
+                                     "ordered":true
+                                 }
+                             ]
+                          }, 
+                          {
+                             "name": "code",
+                             "inInventory": false,
+                             "isSelected": false,
+                             "isCombined": false,
+                             "uses": [
+                                 {
+                                     "asset": "code",
+                                     "combine": "phone",
+                                     "ordered":true
+                                 }
+                             ]
+                          },
+                          {
+                             "name": "key",
+                             "inInventory": false,
+                             "isSelected": false,
+                             "isCombined": false,
+                             "uses": [
+                                 {
+                                     "asset": "key1",
+                                     "combine": null,
+                                     "ordered":true
+                                 }
+                             ]
+                          }
+                       ]
+          },
+          {
+              "room": {
+                  "asset": "trunk",
+                  "x": 50,
+                  "y": 200,
+                  "scaleX": 1,
+                  "scaleY": 1,
+                  "index": 2
+              },
+              "buttons": [
+                            {"name": "lock", 
+                             "completed": false, 
+                             "clickText": null, 
+                             "clickTextComplete": "beep beep",
+                             "change": [null],
+                             "actions": [null],
+                             "x": 325,
+                             "y": 530,
+                             "scaleX": 0.2,
+                             "scaleY": 0.1,
+                             "rotation": 0,
+                             "asset": "button",
+                             "sound": "trunk",
+                             "reset": null,
+                             "call": [null]
+                            },
+                            {"name": "book", 
+                             "completed": false, 
+                             "clickText": null, 
+                             "clickTextComplete": "The book says to open the vents.",
+                             "change": [null],
+                             "actions": ["book"],
+                             "x": 170,
+                             "y": 450,
+                             "scaleX": 0.3,
+                             "scaleY": 0.3,
+                             "rotation": 0,
+                             "asset": "button",
+                             "sound": "book",
+                             "reset": null,
+                             "call": [null]
+                            }, 
+                            {"name": "knife", 
+                             "completed": false, 
+                             "clickText": null, 
+                             "clickTextComplete": "You found a knife",
+                             "change": [null],
+                             "actions": ["exactoKnife"],
+                             "x": 60,
+                             "y": 330,
+                             "scaleX": 0.3,
+                             "scaleY": 0.2,
+                             "rotation": -0.7,
+                             "asset": "button",
+                             "sound": "tear",
+                             "reset": null,
+                             "call": [null]
+                            },
+                            {"name": "keyVent", 
+                             "completed": false, 
+                             "clickText": "It's stuck", 
+                             "clickTextComplete": "You found the key, unlock a vehicle",
+                             "change": ["knife"],
+                             "actions": ["key1"],
+                             "x": 580,
+                             "y": 370,
+                             "scaleX": 0.2,
+                             "scaleY": 0.25,
+                             "rotation": 0.4,
+                             "asset": "button",
+                             "sound": "key",
+                             "reset": null,
+                             "call": [null]
+                            }
+                        ],
+              "items": [
+                          {
+                             "name": "book",
+                             "inInventory": false,
+                             "isSelected": false,
+                             "isCombined": false,
+                             "uses": [
+                                 {
+                                     "asset": "book",
+                                     "combine": null,
+                                     "ordered":true
+                                 }
+                             ]
+                          },
+                          {
+                             "name": "knife",
+                             "inInventory": false,
+                             "isSelected": false,
+                             "isCombined": false,
+                             "uses": [
+                                 {
+                                     "asset": "exactoKnife",
+                                     "combine": null,
+                                     "ordered":true
+                                 }
+                             ]
+                          },
+                          {
+                             "name": "key",
+                             "inInventory": false,
+                             "isSelected": false,
+                             "isCombined": false,
+                             "uses": [
+                                 {
+                                     "asset": "key1",
+                                     "combine": null,
+                                     "ordered":true
+                                 }
+                             ]
+                          }
+                       ]
+          },
+          {
+              "room": {
+                  "asset": "backseat",
+                  "x": 50,
+                  "y": 200,
+                  "scaleX": 1,
+                  "scaleY": 1,
+                  "index": 3
+              },
+              "buttons": [
+                            {"name": "window", 
+                             "completed": false, 
+                             "clickText": null, 
+                             "clickTextComplete": "Hmm...a window",
+                             "change": [null],
+                             "actions": [null],
+                             "x": 500,
+                             "y": 210,
+                             "scaleX": 0.7,
+                             "scaleY": 0.7,
+                             "rotation": 0.25,
+                             "asset": "button",
+                             "sound": "window",
+                             "reset": null,
+                             "call": [null]
+                            }, 
+                            {"name": "greenpill", 
+                             "completed": false, 
+                             "clickText": null, 
+                             "clickTextComplete": "You found a green pill",
+                             "change": [null],
+                             "actions": ["greenpill"],
+                             "x": 50,
+                             "y": 480,
+                             "scaleX": 0.2,
+                             "scaleY": 0.2,
+                             "rotation": 0,
+                             "asset": "button",
+                             "sound": null,
+                             "reset": null,
+                             "call": [null]
+                            }, 
+                            {"name": "knife", 
+                             "completed": false, 
+                             "clickText": null, 
+                             "clickTextComplete": "You found a knife",
+                             "change": [null],
+                             "actions": ["knife"],
+                             "x": 410,
+                             "y": 540,
+                             "scaleX": 0.2,
+                             "scaleY": 0.2,
+                             "rotation": 0,
+                             "asset": "button",
+                             "sound": null,
+                             "reset": null,
+                             "call": [null]
+                            },
+                            {"name": "beaker", 
+                             "completed": false, 
+                             "clickText": null, 
+                             "clickTextComplete": "You found a beaker",
+                             "change": [null],
+                             "actions": ["beaker"],
+                             "x": 250,
+                             "y": 440,
+                             "scaleX": 0.1,
+                             "scaleY": 0.5,
+                             "rotation": -1.3,
+                             "asset": "button",
+                             "sound": null,
+                             "reset": null,
+                             "call": [null]
+                            },
+                            {"name": "stain", 
+                             "completed": false, 
+                             "clickText": "That's gross, you should clean it!", 
+                             "clickTextComplete": "You found the key, unlock a vehicle",
+                             "change": ["beaker", "knife", "greenPill"],
+                             "actions": ["key2"],
+                             "x": 160,
+                             "y": 500,
+                             "scaleX": 0.01,
+                             "scaleY": 0.01,
+                             "rotation": 0,
+                             "asset": "goo",
+                             "sound": "cleaner",
+                             "reset": null,
+                             "call": [null]
+
+                            }
+                        ],
+              "items": [
+                          {
+                             "name": "greenPill",
+                             "inInventory": false,
+                             "isSelected": false,
+                             "isCombined": false,
+                             "uses": [
+                                 {
+                                     "asset": "greenpill",
+                                     "combine": "knife",
+                                     "ordered":true
+                                 },
+                                 {
+                                     "asset": "greenpillOpen",
+                                     "combine": "beaker",
+                                     "ordered":true
+                                 },
+                                 {
+                                     "asset": "greenBeaker",
+                                     "combine": null,
+                                     "ordered":true
+                                 }
+                             ]
+                          },
+                          {
+                             "name": "beaker",
+                             "inInventory": false,
+                             "isSelected": false,
+                             "isCombined": false,
+                             "uses": [
+                                 {
+                                     "asset": "beaker",
+                                     "combine": "greenpillOpen",
+                                     "ordered":false
+                                 }
+                             ]
+                          },
+                          {
+                             "name": "knife",
+                             "inInventory": false,
+                             "isSelected": false,
+                             "isCombined": false,
+                             "uses": [
+                                 {
+                                     "asset": "knife",
+                                     "combine": "greenpill",
+                                     "ordered":false
+                                 }
+                             ]
+                          },
+                          {
+                             "name": "key",
+                             "inInventory": false,
+                             "isSelected": false,
+                             "isCombined": false,
+                             "uses": [
+                                 {
+                                     "asset": "key2",
+                                     "combine": null,
+                                     "ordered":false
+                                 }
+                             ]
+                          }
+                       ]
+          },
+          {
+              "room": {
+                  "asset": "outside",
+                  "x": 50,
+                  "y": 200,
+                  "scaleX": 1,
+                  "scaleY": 1,
+                  "index": 4
+              },
+              "buttons": [
+                            {"name": "scraper", 
+                             "completed": false, 
+                             "clickText": null, 
+                             "clickTextComplete": "You found a paint scraper",
+                             "change": [null],
+                             "actions": ["scraper"],
+                             "x": 600,
+                             "y": 420,
+                             "scaleX": 0.2,
+                             "scaleY": 0.2,
+                             "rotation": 0,
+                             "asset": "button",
+                             "sound": "wrench",
+                             "reset": null,
+                             "call": [null]
+                            }, 
+                            {"name": "side", 
+                             "completed": false, 
+                             "clickText": "Looks like fresh paint", 
+                             "clickTextComplete": "Wash me?",
+                             "change": ["scraper"],
+                             "actions": ["this"],
+                             "x": 450,
+                             "y": 410,
+                             "scaleX": 0.2,
+                             "scaleY": 0.25,
+                             "rotation": 0,
+                             "asset": "side",
+                             "sound": "scrape",
+                             "reset": [
+                                 "side", 
+                                 false, 
+                                 "It's filthy", 
+                                 "Something fell",
+                                 ["rag"],
+                                 ["this"],
+                                 450,
+                                 410,
+                                 0.2,
+                                 0.25,
+                                 0,
+                                 "washMe",
+                                 "wipe",
+                                 [
+                                    "side", 
+                                    false, 
+                                    null, 
+                                    "You found the key, unlock a vehicle",
+                                    [null],
+                                    ["key2"],
+                                    450,
+                                    510,
+                                    0.2,
+                                    0.25,
+                                    0,
+                                    "key2",
+                                    "key",
+                                    null,
+                                    [null]
+                                ],
+                                [null]
+                             ],
+                             "call": [null]
+                            },
+                            {"name": "ticket", 
+                             "completed": false, 
+                             "clickText": null, 
+                             "clickTextComplete": "You found a ticket. It says your lights don't work???",
+                             "change": [null],
+                             "actions": ["ticket"],
+                             "x": 230,
+                             "y": 390,
+                             "scaleX": 0.8,
+                             "scaleY": 0.1,
+                             "rotation": 0.05,
+                             "asset": "button",
+                             "sound": "wipers",
+                             "reset": null,
+                             "call": [null]
+                            },
+                            {"name": "lights", 
+                             "completed": false, 
+                             "clickText": "Why should I turn on the lights?", 
+                             "clickTextComplete": "I guess they work.",
+                             "change": ["ticket"],
+                             "actions": ["rag"],
+                             "x": 110,
+                             "y": 450,
+                             "scaleX": 0.9,
+                             "scaleY": 0.25,
+                             "rotation": 0.1,
+                             "asset": "button",
+                             "sound": "lights",
+                             "reset": null,
+                             "call": ["state.blinkEffect", "outsideLights", 50, 200, 500, true, 3]
+                            }
+                        ],
+              "items": [
+                          {
+                             "name": "side",
+                             "inInventory": false,
+                             "isSelected": false,
+                             "isCombined": false,
+                             "uses": [
+                                 {
+                                     "asset": null,
+                                     "combine": "scraper",
+                                     "ordered":true
+                                 },
+                                 {
+                                     "asset": "washMe",
+                                     "combine": "rag",
+                                     "ordered":true
+                                 },
+                                 {
+                                     "asset": null,
+                                     "combine": null,
+                                     "ordered":true
+                                 }
+                             ]
+                          },
+                          {
+                             "name": "scraper",
+                             "inInventory": false,
+                             "isSelected": false,
+                             "isCombined": false,
+                             "uses": [
+                                 {
+                                     "asset": "scraper",
+                                     "combine": null,
+                                     "ordered":true
+                                 }
+                             ]
+                          },
+                          {
+                             "name": "rag",
+                             "inInventory": false,
+                             "isSelected": false,
+                             "isCombined": false,
+                             "uses": [
+                                 {
+                                     "asset": "rag",
+                                     "combine": null,
+                                     "ordered":true
+                                 }
+                             ]
+                          },
+                          {
+                             "name": "ticket",
+                             "inInventory": false,
+                             "isSelected": false,
+                             "isCombined": false,
+                             "uses": [
+                                 {
+                                     "asset": "ticket",
+                                     "combine": null,
+                                     "ordered":true
+                                 }
+                             ]
+                          },
+                          {
+                             "name": "key",
+                             "inInventory": false,
+                             "isSelected": false,
+                             "isCombined": false,
+                             "uses": [
+                                 {
+                                     "asset": "key2",
+                                     "combine": null,
+                                     "ordered":true
+                                 }
+                             ]
+                          }
+                       ]
+
+          }
+      ]
+    },
+    {
+      "level": 2,
+      "rooms": [
+          {
+              "room": {
+                  "asset": "interior",
+                  "x": 50,
+                  "y": 200,
+                  "scaleX": 1,
+                  "scaleY": 1,
+                  "index": 1
+              },
+              "buttons": [
+                            {"name": "coins", 
+                             "completed": false, 
+                             "clickText": null, 
+                             "clickTextComplete": "You found Coins",
+                             "change": [null],
+                             "actions": ["coins"],
+                             "x": 420,
+                             "y": 420,
+                             "scaleX": 0.7,
+                             "scaleY": 0.35,
+                             "rotation": 0.6,
+                             "asset": "button",
+                             "sound": "coins",
+                             "reset": null,
+                             "call": [null]
+                            }, 
+                            {"name": "gloveBox", 
+                             "completed": false, 
+                             "clickText": "It's locked!", 
+                             "clickTextComplete": "You found a flashlight",
+                             "change": ["coins"],
+                             "actions": ["flashlight"],
+                             "x": 340,
+                             "y": 330,
+                             "scaleX": 0.25,
+                             "scaleY": 0.2,
+                             "rotation": -0.1,
+                             "asset": "button",
+                             "sound": "glovebox",
+                             "reset": null,
+                             "call": [null]
+                            },
+                            {"name": "phone", 
+                             "completed": false, 
+                             "clickText": "Can't see", 
+                             "clickTextComplete": "You found a phone",
+                             "change": ["flashlight"],
+                             "actions": ["phone"],
+                             "x": 120,
+                             "y": 450,
+                             "scaleX": 0.45,
+                             "scaleY": 0.45,
+                             "rotation": -0.3,
+                             "asset": "button",
+                             "sound": "flashlight",
+                             "reset": null,
+                             "call": [null]
+                            },
+                            {"name": "wheel", 
+                             "completed": false, 
+                             "clickText": null, 
+                             "clickTextComplete": "honk",
+                             "change": [null],
+                             "actions": [null],
+                             "x": 160,
+                             "y": 230,
+                             "scaleX": 0.7,
+                             "scaleY": 1,
+                             "rotation": 0,
+                             "asset": "button",
+                             "sound": "honk",
+                             "reset": null,
+                             "call": [null]
+                            },
+                            {"name": "ventCode", 
+                             "completed": false, 
+                             "clickText": null, 
+                             "clickTextComplete": "You found a pass code",
+                             "change": [null],
+                             "actions": ["code"],
+                             "x": 78,
+                             "y": 410,
+                             "scaleX": 0.3,
+                             "scaleY": 0.2,
+                             "rotation": -0.3,
+                             "asset": "button",
+                             "sound": "vent",
+                             "reset": null,
+                             "call": [null]
+                            },
+                            {"name": "keyButton", 
+                             "completed": false, 
+                             "clickText": "You can't leave without a key", 
+                             "clickTextComplete": "You found the key, unlock a vehicle",
+                             "change": ["phone", "code"],
+                             "actions": ["key1"],
+                             "x": 420,
+                             "y": 310,
+                             "scaleX": 0.6,
+                             "scaleY": 0.5,
+                             "rotation": 0,
+                             "asset": "button",
+                             "sound": "key",
+                             "reset": null,
+                             "call": [null]
+                            }
+                        ],
+              "items": [
+                         {
+                             "name": "coins",
+                             "inInventory": false,
+                             "isSelected": false,
+                             "isCombined": false,
+                             "uses": [
+                                 {
+                                     "asset": "coins",
+                                     "combine": null,
+                                     "ordered":true
+                                 }
+                             ]
+                          },  
+                          {
+                             "name": "flashlight",
+                             "inInventory": false,
+                             "isSelected": false,
+                             "isCombined": false,
+                             "uses": [
+                                 {
+                                     "asset": "flashlight",
+                                     "combine": null,
+                                     "ordered":true
+                                 }
+                             ]
+                          }, 
+                          {
+                             "name": "phone",
+                             "inInventory": false,
+                             "isSelected": false,
+                             "isCombined": false,
+                             "uses": [
+                                 {
+                                     "asset": "phone",
+                                     "combine": "code",
+                                     "ordered":true
+                                 },
+                                 {
+                                     "asset": "phoneActive",
+                                     "combine": null,
+                                     "ordered":true
+                                 }
+                             ]
+                          }, 
+                          {
+                             "name": "code",
+                             "inInventory": false,
+                             "isSelected": false,
+                             "isCombined": false,
+                             "uses": [
+                                 {
+                                     "asset": "code",
+                                     "combine": "phone",
+                                     "ordered":true
+                                 }
+                             ]
+                          },
+                          {
+                             "name": "key",
+                             "inInventory": false,
+                             "isSelected": false,
+                             "isCombined": false,
+                             "uses": [
+                                 {
+                                     "asset": "key1",
+                                     "combine": null,
+                                     "ordered":true
+                                 }
+                             ]
+                          }
+                       ]
+          },
+          {
+              "room": {
+                  "asset": "trunk",
+                  "x": 50,
+                  "y": 200,
+                  "scaleX": 1,
+                  "scaleY": 1,
+                  "index": 2
+              },
+              "buttons": [
+                            {"name": "lock", 
+                             "completed": false, 
+                             "clickText": null, 
+                             "clickTextComplete": "beep beep",
+                             "change": [null],
+                             "actions": [null],
+                             "x": 325,
+                             "y": 530,
+                             "scaleX": 0.2,
+                             "scaleY": 0.1,
+                             "rotation": 0,
+                             "asset": "button",
+                             "sound": "trunk",
+                             "reset": null,
+                             "call": [null]
+                            },
+                            {"name": "book", 
+                             "completed": false, 
+                             "clickText": null, 
+                             "clickTextComplete": "The book says to open the vents.",
+                             "change": [null],
+                             "actions": ["book"],
+                             "x": 170,
+                             "y": 450,
+                             "scaleX": 0.3,
+                             "scaleY": 0.3,
+                             "rotation": 0,
+                             "asset": "button",
+                             "sound": "book",
+                             "reset": null,
+                             "call": [null]
+                            }, 
+                            {"name": "knife", 
+                             "completed": false, 
+                             "clickText": null, 
+                             "clickTextComplete": "You found a knife",
+                             "change": [null],
+                             "actions": ["exactoKnife"],
+                             "x": 60,
+                             "y": 330,
+                             "scaleX": 0.3,
+                             "scaleY": 0.2,
+                             "rotation": -0.7,
+                             "asset": "button",
+                             "sound": "tear",
+                             "reset": null,
+                             "call": [null]
+                            },
+                            {"name": "wrenchVent", 
+                             "completed": false, 
+                             "clickText": "It's stuck", 
+                             "clickTextComplete": "You found a wrench",
+                             "change": ["knife"],
+                             "actions": ["wrench"],
+                             "x": 70,
+                             "y": 390,
+                             "scaleX": 0.2,
+                             "scaleY": 0.25,
+                             "rotation": -0.4,
+                             "asset": "button",
+                             "sound": "pry",
+                             "reset": null,
+                             "call": [null]
+                            },
+                            {"name": "keyVent", 
+                             "completed": false, 
+                             "clickText": "It's bolted on", 
+                             "clickTextComplete": "You found the key, unlock a vehicle",
+                             "change": ["wrench"],
+                             "actions": ["key1"],
+                             "x": 580,
+                             "y": 370,
+                             "scaleX": 0.2,
+                             "scaleY": 0.25,
+                             "rotation": 0.4,
+                             "asset": "button",
+                             "sound": "key",
+                             "reset": null,
+                             "call": [null]
+                            }
+                        ],
+              "items": [
+                          {
+                             "name": "book",
+                             "inInventory": false,
+                             "isSelected": false,
+                             "isCombined": false,
+                             "uses": [
+                                 {
+                                     "asset": "book",
+                                     "combine": null,
+                                     "ordered":true
+                                 }
+                             ]
+                          },
+                          {
+                             "name": "knife",
+                             "inInventory": false,
+                             "isSelected": false,
+                             "isCombined": false,
+                             "uses": [
+                                 {
+                                     "asset": "exactoKnife",
+                                     "combine": null,
+                                     "ordered":true
+                                 }
+                             ]
+                          },
+                          {
+                             "name": "wrench",
+                             "inInventory": false,
+                             "isSelected": false,
+                             "isCombined": false,
+                             "uses": [
+                                 {
+                                     "asset": "wrench",
+                                     "combine": null,
+                                     "ordered":true
+                                 }
+                             ]
+                          },
+                          {
+                             "name": "key",
+                             "inInventory": false,
+                             "isSelected": false,
+                             "isCombined": false,
+                             "uses": [
+                                 {
+                                     "asset": "key1",
+                                     "combine": null,
+                                     "ordered":true
+                                 }
+                             ]
+                          }
+                       ]
+          },
+          {
+              "room": {
+                  "asset": "backseat",
+                  "x": 50,
+                  "y": 200,
+                  "scaleX": 1,
+                  "scaleY": 1,
+                  "index": 3
+              },
+              "buttons": [
+                            {"name": "window", 
+                             "completed": false, 
+                             "clickText": null, 
+                             "clickTextComplete": "Hmm...a window",
+                             "change": [null],
+                             "actions": [null],
+                             "x": 500,
+                             "y": 210,
+                             "scaleX": 0.7,
+                             "scaleY": 0.7,
+                             "rotation": 0.25,
+                             "asset": "button",
+                             "sound": "window",
+                             "reset": null,
+                             "call": [null]
+                            }, 
+                            {"name": "greenpill", 
+                             "completed": false, 
+                             "clickText": null, 
+                             "clickTextComplete": "You found a green pill",
+                             "change": [null],
+                             "actions": ["greenpill"],
+                             "x": 50,
+                             "y": 480,
+                             "scaleX": 0.2,
+                             "scaleY": 0.2,
+                             "rotation": 0,
+                             "asset": "button",
+                             "sound": null,
+                             "reset": null,
+                             "call": [null]
+                            }, 
+                            {"name": "redpill", 
+                             "completed": false, 
+                             "clickText": null, 
+                             "clickTextComplete": "You found a red pill",
+                             "change": [null],
+                             "actions": ["redpill"],
+                             "x": 380,
+                             "y": 420,
+                             "scaleX": 0.015,
+                             "scaleY": 0.015,
+                             "rotation": 0,
+                             "asset": "trash",
+                             "sound": "trash",
+                             "reset": null,
+                             "call": [null]
+                            },
+                            {"name": "yellowpill", 
+                             "completed": false, 
+                             "clickText": null, 
+                             "clickTextComplete": "You found a yellow pill",
+                             "change": [null],
+                             "actions": ["yellowpill"],
+                             "x": 500,
+                             "y": 490,
+                             "scaleX": 0.3,
+                             "scaleY": 0.1,
+                             "rotation": 0.2,
+                             "asset": "button",
+                             "sound": null,
+                             "reset": null,
+                             "call": [null]
+                            },
+                            {"name": "bluepill", 
+                             "completed": false, 
+                             "clickText": null, 
+                             "clickTextComplete": "You found a blue pill",
+                             "change": [null],
+                             "actions": ["bluepill"],
+                             "x": 50,
+                             "y": 300,
+                             "scaleX": 0.015,
+                             "scaleY": 0.015,
+                             "rotation": 0,
+                             "asset": "trash",
+                             "sound": "trash",
+                             "reset": null,
+                             "call": [null]
+                            },
+                            {"name": "knife", 
+                             "completed": false, 
+                             "clickText": null, 
+                             "clickTextComplete": "You found a knife",
+                             "change": [null],
+                             "actions": ["knife"],
+                             "x": 410,
+                             "y": 540,
+                             "scaleX": 0.2,
+                             "scaleY": 0.2,
+                             "rotation": 0,
+                             "asset": "button",
+                             "sound": null,
+                             "reset": null,
+                             "call": [null]
+                            },
+                            {"name": "beaker", 
+                             "completed": false, 
+                             "clickText": null, 
+                             "clickTextComplete": "You found a beaker",
+                             "change": [null],
+                             "actions": ["beaker"],
+                             "x": 250,
+                             "y": 440,
+                             "scaleX": 0.1,
+                             "scaleY": 0.5,
+                             "rotation": -1.3,
+                             "asset": "button",
+                             "sound": null,
+                             "reset": null,
+                             "call": [null]
+                            },
+                            {"name": "stain", 
+                             "completed": false, 
+                             "clickText": "That's gross, you should clean it!", 
+                             "clickTextComplete": "You found the key, unlock a vehicle",
+                             "change": ["beaker", "knife", "greenPill"],
+                             "actions": ["key2"],
+                             "x": 160,
+                             "y": 500,
+                             "scaleX": 0.01,
+                             "scaleY": 0.01,
+                             "rotation": 0,
+                             "asset": "goo",
+                             "sound": "cleaner",
+                             "reset": null,
+                             "call": [null]
+
+                            }
+                        ],
+              "items": [
+                          {
+                             "name": "redPill",
+                             "inInventory": false,
+                             "isSelected": false,
+                             "isCombined": false,
+                             "uses": [
+                                 {
+                                     "asset": "redpill",
+                                     "combine": "knife",
+                                     "ordered":true
+                                 },
+                                 {
+                                     "asset": "redpillOpen",
+                                     "combine": "beaker",
+                                     "ordered":true
+                                 },
+                                 {
+                                     "asset": "redBeaker",
+                                     "combine": null,
+                                     "ordered":true
+                                 }
+                             ]
+                          },
+                          {
+                             "name": "bluePill",
+                             "inInventory": false,
+                             "isSelected": false,
+                             "isCombined": false,
+                             "uses": [
+                                 {
+                                     "asset": "bluepill",
+                                     "combine": "knife",
+                                     "ordered":true
+                                 },
+                                 {
+                                     "asset": "bluepillOpen",
+                                     "combine": "beaker",
+                                     "ordered":true
+                                 },
+                                 {
+                                     "asset": "blueBeaker",
+                                     "combine": null,
+                                     "ordered":true
+                                 }
+                             ]
+                          },
+                          {
+                             "name": "yellowPill",
+                             "inInventory": false,
+                             "isSelected": false,
+                             "isCombined": false,
+                             "uses": [
+                                 {
+                                     "asset": "yellowpill",
+                                     "combine": "knife",
+                                     "ordered":true
+                                 },
+                                 {
+                                     "asset": "yellowpillOpen",
+                                     "combine": "beaker",
+                                     "ordered":true
+                                 },
+                                 {
+                                     "asset": "yellowBeaker",
+                                     "combine": null,
+                                     "ordered":true
+                                 }
+                             ]
+                          },
+                          {
+                             "name": "greenPill",
+                             "inInventory": false,
+                             "isSelected": false,
+                             "isCombined": false,
+                             "uses": [
+                                 {
+                                     "asset": "greenpill",
+                                     "combine": "knife",
+                                     "ordered":true
+                                 },
+                                 {
+                                     "asset": "greenpillOpen",
+                                     "combine": "beaker",
+                                     "ordered":true
+                                 },
+                                 {
+                                     "asset": "greenBeaker",
+                                     "combine": null,
+                                     "ordered":true
+                                 }
+                             ]
+                          },
+                          {
+                             "name": "beaker",
+                             "inInventory": false,
+                             "isSelected": false,
+                             "isCombined": false,
+                             "uses": [
+                                 {
+                                     "asset": "beaker",
+                                     "combine": "redpillOpen",
+                                     "ordered":false
+                                 },
+                                 {
+                                     "asset": "beaker",
+                                     "combine": "bluepillOpen",
+                                     "ordered":false
+                                 },
+                                 {
+                                     "asset": "beaker",
+                                     "combine": "yellowpillOpen",
+                                     "ordered":false
+                                 },
+                                 {
+                                     "asset": "beaker",
+                                     "combine": "greenpillOpen",
+                                     "ordered":false
+                                 }
+                             ]
+                          },
+                          {
+                             "name": "knife",
+                             "inInventory": false,
+                             "isSelected": false,
+                             "isCombined": false,
+                             "uses": [
+                                 {
+                                     "asset": "knife",
+                                     "combine": "redpill",
+                                     "ordered":false
+                                 },
+                                 {
+                                     "asset": "knife",
+                                     "combine": "bluepill",
+                                     "ordered":false
+                                 },
+                                 {
+                                     "asset": "knife",
+                                     "combine": "yellowpill",
+                                     "ordered":false
+                                 },
+                                 {
+                                     "asset": "knife",
+                                     "combine": "greenpill",
+                                     "ordered":false
+                                 }
+                             ]
+                          },
+                          {
+                             "name": "key",
+                             "inInventory": false,
+                             "isSelected": false,
+                             "isCombined": false,
+                             "uses": [
+                                 {
+                                     "asset": "key2",
+                                     "combine": null,
+                                     "ordered":false
+                                 }
+                             ]
+                          }
+                       ]
+          },
+          {
+              "room": {
+                  "asset": "outside",
+                  "x": 50,
+                  "y": 200,
+                  "scaleX": 1,
+                  "scaleY": 1,
+                  "index": 4
+              },
+              "buttons": [
+                            {"name": "wrench", 
+                             "completed": false, 
+                             "clickText": null, 
+                             "clickTextComplete": "You found a wrench",
+                             "change": [null],
+                             "actions": ["wrench"],
+                             "x": 600,
+                             "y": 420,
+                             "scaleX": 0.2,
+                             "scaleY": 0.2,
+                             "rotation": 0,
+                             "asset": "button",
+                             "sound": "wrench",
+                             "reset": null,
+                             "call": [null]
+                            }, 
+                            {"name": "tire", 
+                             "completed": false, 
+                             "clickText": "There is something in there", 
+                             "clickTextComplete": "You found a paint scraper",
+                             "change": ["wrench"],
+                             "actions": ["scraper"],
+                             "x": 360,
+                             "y": 460,
+                             "scaleX": 0.3,
+                             "scaleY": 0.5,
+                             "rotation": 0,
+                             "asset": "button",
+                             "sound": "tire",
+                             "reset": null,
+                             "call": [null]
+                            },
+                            {"name": "side", 
+                             "completed": false, 
+                             "clickText": "Looks like fresh paint", 
+                             "clickTextComplete": "Wash me?",
+                             "change": ["scraper"],
+                             "actions": ["this"],
+                             "x": 450,
+                             "y": 410,
+                             "scaleX": 0.2,
+                             "scaleY": 0.25,
+                             "rotation": 0,
+                             "asset": "side",
+                             "sound": "scrape",
+                             "reset": [
+                                 "side", 
+                                 false, 
+                                 "It's filthy", 
+                                 "Something fell",
+                                 ["rag"],
+                                 ["this"],
+                                 450,
+                                 410,
+                                 0.2,
+                                 0.25,
+                                 0,
+                                 "washMe",
+                                 "wipe",
+                                 [
+                                    "side", 
+                                    false, 
+                                    null, 
+                                    "You found the key, unlock a vehicle",
+                                    [null],
+                                    ["key2"],
+                                    450,
+                                    510,
+                                    0.2,
+                                    0.25,
+                                    0,
+                                    "key2",
+                                    "key",
+                                    null,
+                                    [null]
+                                ],
+                                [null]
+                             ],
+                             "call": [null]
+                            },
+                            {"name": "ticket", 
+                             "completed": false, 
+                             "clickText": null, 
+                             "clickTextComplete": "You found a ticket. It says your lights don't work???",
+                             "change": [null],
+                             "actions": ["ticket"],
+                             "x": 230,
+                             "y": 390,
+                             "scaleX": 0.8,
+                             "scaleY": 0.1,
+                             "rotation": 0.05,
+                             "asset": "button",
+                             "sound": "wipers",
+                             "reset": null,
+                             "call": [null]
+                            },
+                            {"name": "lights", 
+                             "completed": false, 
+                             "clickText": "Why should I turn on the lights?", 
+                             "clickTextComplete": "I guess they work.",
+                             "change": ["ticket"],
+                             "actions": ["rag"],
+                             "x": 110,
+                             "y": 450,
+                             "scaleX": 0.9,
+                             "scaleY": 0.25,
+                             "rotation": 0.1,
+                             "asset": "button",
+                             "sound": "lights",
+                             "reset": null,
+                             "call": ["state.blinkEffect", "outsideLights", 50, 200, 500, true, 3]
+                            }
+                        ],
+              "items": [
+                          {
+                             "name": "side",
+                             "inInventory": false,
+                             "isSelected": false,
+                             "isCombined": false,
+                             "uses": [
+                                 {
+                                     "asset": null,
+                                     "combine": "scraper",
+                                     "ordered":true
+                                 },
+                                 {
+                                     "asset": "washMe",
+                                     "combine": "rag",
+                                     "ordered":true
+                                 },
+                                 {
+                                     "asset": null,
+                                     "combine": null,
+                                     "ordered":true
+                                 }
+                             ]
+                          },
+                          {
+                             "name": "scraper",
+                             "inInventory": false,
+                             "isSelected": false,
+                             "isCombined": false,
+                             "uses": [
+                                 {
+                                     "asset": "scraper",
+                                     "combine": null,
+                                     "ordered":true
+                                 }
+                             ]
+                          },
+                          {
+                             "name": "rag",
+                             "inInventory": false,
+                             "isSelected": false,
+                             "isCombined": false,
+                             "uses": [
+                                 {
+                                     "asset": "rag",
+                                     "combine": null,
+                                     "ordered":true
+                                 }
+                             ]
+                          },
+                          {
+                             "name": "wrench",
+                             "inInventory": false,
+                             "isSelected": false,
+                             "isCombined": false,
+                             "uses": [
+                                 {
+                                     "asset": "wrench",
+                                     "combine": null,
+                                     "ordered":true
+                                 }
+                             ]
+                          },
+                          {
+                             "name": "ticket",
+                             "inInventory": false,
+                             "isSelected": false,
+                             "isCombined": false,
+                             "uses": [
+                                 {
+                                     "asset": "ticket",
+                                     "combine": null,
+                                     "ordered":true
+                                 }
+                             ]
+                          },
+                          {
+                             "name": "key",
+                             "inInventory": false,
+                             "isSelected": false,
+                             "isCombined": false,
+                             "uses": [
+                                 {
+                                     "asset": "key2",
+                                     "combine": null,
+                                     "ordered":true
+                                 }
+                             ]
+                          }
+                       ]
+
+          }
+      ]
+    }
+  ],
+  "vehicles": [
+      {
+          "vehicle": 0,
+          "type": "car",
+          "asset": "smallCar",
+          "x": 490,
+          "y": 15,
+          "scale": 0.5,
+          "room": null,
+          "unlocked": false
+      },
+      {
+          "vehicle": 1,
+          "type": "car",
+          "asset": "car",
+          "x": 340,
+          "y": 15,
+          "scale": 0.5,
+          "room": null,
+          "unlocked": false
+      },
+      {
+          "vehicle": 2,
+          "type": "suv",
+          "asset": "suv",
+          "x": 170,
+          "y": 15,
+          "scale": 0.5,
+          "room": null,
+          "unlocked": false
+      },
+      {
+          "vehicle": 3,
+          "type": "truck",
+          "asset": "truck",
+          "x": -5,
+          "y": 0,
+          "scale": 0.55,
+          "room": null,
+          "unlocked": false
+      }
+  ],
+  "audio": ["background0", "background1", "background2", "background3", "background4", null]
+}
