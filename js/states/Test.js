@@ -4,9 +4,10 @@ var Point = Point || {};
 Point.TestState = {
   create: function() 
   {  
+      this.counter = 0;
       this.garbage = this.add.group();
       this.add.sprite(50, 100, 'truckO');
-      this.add.sprite(50, 100, 'wash');
+      this.wash = this.add.sprite(50, 100, 'wash');
       
       this.add.button(50, 400, 'pin', function(pin)
       {
@@ -35,7 +36,6 @@ Point.TestState = {
               {
                   console.log('You picked up all the trash! Oh wait, there is a rag here. Maybe you could use it to clean something?');
                   
-                  
                   this.add.button(150, 400, 'rag', function(rag)
                   {
                       rag.kill();
@@ -44,7 +44,7 @@ Point.TestState = {
                       //Create the 'prize'
                       this.chaos = this.game.make.sprite(0, 0, 'truckO');
                       this.bmd = this.game.make.bitmapData(600, 400);
-                      console.log(this.bmd);
+                      //console.log(this.bmd);
 
                       this.game.add.sprite(50, 100, this.bmd)
 
@@ -65,6 +65,16 @@ Point.TestState = {
         //'Alpha-ize' the area covered by the scratch
         //Clear the instruction data
         this.bmd.alphaMask(this.chaos, this.rag);
-        console.log(this.bmd);
+        if(pointer.x>50 && pointer.x<650 && pointer.y>100 && pointer.y<500)
+        {
+            this.counter++;
+        }
+        if(this.counter>3500)
+        {
+            this.wash.kill();
+            this.bmd.clear();
+            this.game.input.deleteMoveCallback(this.move, this);
+            console.log('Game Over');
+        }
     }
 }
