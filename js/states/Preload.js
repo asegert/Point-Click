@@ -113,6 +113,9 @@ Point.PreloadState = {
     this.load.image('wash', 'assets/images/wash.png');
     this.load.image('garbage', 'assets/images/garbage.png');
     this.load.image('pin', 'assets/images/pin.png');
+    this.load.image('waterBucket', 'assets/images/waterBucket.png');
+    this.load.image('cleanWaterBucket', 'assets/images/cleanWaterBucket.png');
+    this.load.image('waterParticle', 'assets/images/waterParicle.png');
     
     //Data
     //Contains levels which each hold a level 0-2
