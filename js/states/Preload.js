@@ -123,6 +123,7 @@ Point.PreloadState = {
     this.load.image('keyfobTrunk', 'assets/images/keyfobTrunk.png');
     this.load.image('keyfobUnlock', 'assets/images/keyfobUnlock.png');
     this.load.image('keyfobLock', 'assets/images/keyfobLock.png');
+    this.load.image('rag2', 'assets/images/rag2.png');
     //Data
     //Contains levels which each hold a level 0-2
       //Each level contains 4 rooms 0-3

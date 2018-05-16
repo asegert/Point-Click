@@ -128,11 +128,11 @@ Point.TestState = {
                   {
                       this.goalText.setText('You picked up all the trash!\nOh wait, there is a rag here.\nMaybe you could use it to clean something?');
                   
-                      this.add.button(150, 400, 'rag', function(rag)
+                      this.add.button(60, 570, 'rag2', function(rag)
                       {
                           rag.kill();
                           this.keyFob.destroy();
-                          this.rag = this.game.make.sprite(0, 0, 'rag');
+                          this.rag = this.game.make.sprite(0, 0, 'rag2');
                           this.rag.anchor.set(0.5, 0.5);
                           //Create the 'prize'
                           this.chaos = this.game.make.sprite(0, 0, 'maskData');
@@ -163,7 +163,7 @@ Point.TestState = {
         {
             this.counter++;
         }
-        if(this.counter>3500)
+        if(this.counter>3300)
         {
             this.bucket.loadTexture('waterBucket');
             this.wash.kill();
