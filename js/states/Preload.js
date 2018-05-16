@@ -108,8 +108,10 @@ Point.PreloadState = {
     this.load.image('rag', 'assets/images/rag.png');
     this.load.image('side', 'assets/images/side.png');
     //Use wrench
-      
-    this.load.image('truckO', 'assets/images/outside.jpg');
+    //Test
+    this.load.image('garage', 'assets/images/garage.png');
+    this.load.image('truckO', 'assets/images/outside.png');
+    this.load.image('maskData', 'assets/images/maskData.png');
     this.load.image('wash', 'assets/images/wash.png');
     this.load.image('garbage', 'assets/images/garbage.png');
     this.load.image('pin', 'assets/images/pin.png');

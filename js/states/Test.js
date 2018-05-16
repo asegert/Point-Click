@@ -4,19 +4,24 @@ var Point = Point || {};
 Point.TestState = {
   create: function() 
   {  
-      this.goalText = this.add.text(350, 50, "Ugh, this truck is a mess.\nI think it might be yours.\nCan you check?", {font: '24px', align: 'center'});
-      this.alertText = this.add.text(350, 50, "", {font: '24px', align: 'center'});
+      this.add.sprite(0, 0, 'garage');
+      this.goalText = this.add.text(350, 50, "Ugh, this truck is a mess.\nI think it might be yours.\nCan you check?", {font: '24px', fill: '#FFFFFF', align: 'center'});
+      this.alertText = this.add.text(350, 50, "", {font: '24px', fill: '#FFFFFF', align: 'center'});
       this.goalText.anchor.setTo(0.5, 0.5);
       this.alertText.anchor.setTo(0.5, 0.5);
       this.counter = 0;
       this.stage = 0;
       this.garbage = this.add.group();
-      this.truck = this.add.button(50, 100, 'truckO', function()
+      this.truck = this.add.button(70, 150, 'truckO', function()
       {
             if(this.stage === 4)
             {
                 this.goalText.setText('Vroom');
                 console.log('Game Over');
+            }
+            else if(this.stage === 3)
+            {
+                
             }
             else
             {
@@ -29,7 +34,7 @@ Point.TestState = {
                 }, this);
             }
       }, this);
-      this.wash = this.add.sprite(50, 100, 'wash');
+      this.wash = this.add.sprite(70, 150, 'wash');
       
       this.keyFob = this.add.sprite(0, 0, 'keyfob');
       this.keyFobLock = this.add.button(31, 35, 'keyfobLock', function()
@@ -42,7 +47,7 @@ Point.TestState = {
               this.goalText.alpha=1;
           }, this);
       }, this);
-      this.keyFobUnlock = this.add.button(31, 63, 'keyfobUnlock', function()
+      this.keyFobUnlock = this.add.button(31, 62, 'keyfobUnlock', function()
       {
           if(this.stage === 1)
           {
@@ -60,7 +65,7 @@ Point.TestState = {
               }, this);
           }
       }, this);
-      this.keyFobTrunk = this.add.button(31, 94, 'keyfobTrunk', function()
+      this.keyFobTrunk = this.add.button(31, 93, 'keyfobTrunk', function()
       {
           this.goalText.alpha=0;
           this.alertText.setText("It's a truck, there's no trunk.");
@@ -102,15 +107,15 @@ Point.TestState = {
       
       for(var i=0; i<30; i++)
       {
-          var rand = Math.floor(Math.random()*540)+60;
+          var rand = Math.floor(Math.random()*540)+80;
           
           if(rand <200)
           {
-              var newRand = Math.floor(Math.random()*200)+390;
+              var newRand = Math.floor(Math.random()*200)+440;
           }
           else
           {
-              var newRand = Math.floor(Math.random()*100)+490;
+              var newRand = Math.floor(Math.random()*50)+540;
           }
           
           this.garbage.add(this.add.button(rand, newRand, 'garbage', function(button)
@@ -130,10 +135,10 @@ Point.TestState = {
                           this.rag = this.game.make.sprite(0, 0, 'rag');
                           this.rag.anchor.set(0.5, 0.5);
                           //Create the 'prize'
-                          this.chaos = this.game.make.sprite(0, 0, 'truckO');
-                          this.bmd = this.game.make.bitmapData(600, 400);
+                          this.chaos = this.game.make.sprite(0, 0, 'maskData');
+                          this.bmd = this.game.make.bitmapData(700, 651);//-for sprite
                           //console.log(this.bmd);
-                          this.game.add.sprite(50, 100, this.bmd)
+                          this.game.add.sprite(0, 0, this.bmd)
 
                           //When input is coming in...
                           this.game.input.addMoveCallback(this.move, this);
@@ -149,8 +154,8 @@ Point.TestState = {
     move: function (pointer)
     {
         //move our brush
-        this.rag.x = pointer.position.x-50;
-        this.rag.y = pointer.position.y-100;
+        this.rag.x = pointer.position.x-0;
+        this.rag.y = pointer.position.y-0;
         //'Alpha-ize' the area covered by the scratch
         //Clear the instruction data
         this.bmd.alphaMask(this.chaos, this.rag);
