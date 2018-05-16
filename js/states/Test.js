@@ -4,16 +4,29 @@ var Point = Point || {};
 Point.TestState = {
   create: function() 
   {  
-      this.goalText = this.add.text(150, 0, "Ugh, this truck is a mess.\nI think it might be yours.\nCan you check?", {font: '24px', align: 'center'});
+      this.goalText = this.add.text(350, 50, "Ugh, this truck is a mess.\nI think it might be yours.\nCan you check?", {font: '24px', align: 'center'});
+      this.alertText = this.add.text(350, 50, "", {font: '24px', align: 'center'});
+      this.goalText.anchor.setTo(0.5, 0.5);
+      this.alertText.anchor.setTo(0.5, 0.5);
       this.counter = 0;
       this.stage = 0;
       this.garbage = this.add.group();
       this.truck = this.add.button(50, 100, 'truckO', function()
       {
-            if(this.stage === 3)
+            if(this.stage === 4)
             {
-                console.log('Vroom');
+                this.goalText.setText('Vroom');
                 console.log('Game Over');
+            }
+            else
+            {
+                this.goalText.alpha=0;
+                this.alertText.setText("Well, hitting it won't work");
+                this.game.time.events.add(Phaser.Timer.SECOND * 2, function()
+                {
+                    this.alertText.setText('');
+                    this.goalText.alpha=1;
+                }, this);
             }
       }, this);
       this.wash = this.add.sprite(50, 100, 'wash');
@@ -21,19 +34,41 @@ Point.TestState = {
       this.keyFob = this.add.sprite(0, 0, 'keyfob');
       this.keyFobLock = this.add.button(31, 35, 'keyfobLock', function()
       {
-          this.goalText.setText("It's already locked.");
+          this.goalText.alpha=0;
+          this.alertText.setText("It's already locked.");
+          this.game.time.events.add(Phaser.Timer.SECOND * 2, function()
+          {
+            this.alertText.setText('');
+              this.goalText.alpha=1;
+          }, this);
       }, this);
       this.keyFobUnlock = this.add.button(31, 63, 'keyfobUnlock', function()
       {
           if(this.stage === 1)
           {
-              this.goalText.setText("Well it's unlocked, but it looks like we need a key to start the truck. Maybe it's underneath all this trash.");
+              this.goalText.setText("Well it's unlocked, but it looks like we need a\nkey to start the truck.\nMaybe it's underneath all this trash.");
               this.stage++;
+          }
+          else
+          {
+              this.goalText.alpha=0;
+              this.alertText.setText("Let's not unlock your truck until\nwe are sure this is it.");
+              this.game.time.events.add(Phaser.Timer.SECOND * 2, function()
+              {
+                  this.alertText.setText('');
+                  this.goalText.alpha=1;
+              }, this);
           }
       }, this);
       this.keyFobTrunk = this.add.button(31, 94, 'keyfobTrunk', function()
       {
-          this.goalText.setText("It's a truck, there's no trunk.");
+          this.goalText.alpha=0;
+          this.alertText.setText("It's a truck, there's no trunk.");
+          this.game.time.events.add(Phaser.Timer.SECOND * 2, function()
+          {
+            this.alertText.setText('');
+              this.goalText.alpha=1;
+          }, this);
       }, this);
       this.keyFobAlarm = this.add.button(33, 125, 'keyfobAlarm', function()
       {
@@ -51,6 +86,16 @@ Point.TestState = {
           if(button.key != 'cleanWaterBucket')
           {
               this.pourWater();
+          }
+          else
+          {
+              this.goalText.alpha=0;
+              this.alertText.setText("It's a bucket of water.");
+              this.game.time.events.add(Phaser.Timer.SECOND * 2, function()
+              {
+                  this.alertText.setText('');
+                  this.goalText.alpha=1;
+              }, this);
           }
       }, this);
       this.bucket.anchor.setTo(0.1, 0.9);
@@ -76,7 +121,7 @@ Point.TestState = {
                   button.kill();
                   if(this.garbage.children.length === 0)
                   {
-                      this.goalText.setText('You picked up all the trash! Oh wait, there is a rag here. Maybe you could use it to clean something?');
+                      this.goalText.setText('You picked up all the trash!\nOh wait, there is a rag here.\nMaybe you could use it to clean something?');
                   
                       this.add.button(150, 400, 'rag', function(rag)
                       {
