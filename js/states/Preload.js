@@ -116,7 +116,11 @@ Point.PreloadState = {
     this.load.image('waterBucket', 'assets/images/waterBucket.png');
     this.load.image('cleanWaterBucket', 'assets/images/cleanWaterBucket.png');
     this.load.image('waterParticle', 'assets/images/waterParicle.png');
-    
+    this.load.image('keyfob', 'assets/images/keyfob.png');
+    this.load.image('keyfobAlarm', 'assets/images/keyfobAlarm.png');
+    this.load.image('keyfobTrunk', 'assets/images/keyfobTrunk.png');
+    this.load.image('keyfobUnlock', 'assets/images/keyfobUnlock.png');
+    this.load.image('keyfobLock', 'assets/images/keyfobLock.png');
     //Data
     //Contains levels which each hold a level 0-2
       //Each level contains 4 rooms 0-3
