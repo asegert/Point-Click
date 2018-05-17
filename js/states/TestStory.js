@@ -8,6 +8,7 @@ Point.TestStoryState = {
         this.add.sprite(120, 150, 'testTitle');
         this.add.button(250, 350, 'easy', function()
         {
+            //Allow sound on Chrome
             if (this.game.sound.context.state === 'suspended')
             {
                 this.game.sound.context.resume();
