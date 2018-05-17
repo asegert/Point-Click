@@ -171,6 +171,7 @@ Point.TestState = {
             this.game.input.deleteMoveCallback(this.move, this);
             this.goalText.setText('Ugh, look at that filthy water, you should pour that out.');
         }
+        this.world.bringToTop(this.bucket);
     },
     pourWater: function()
    {
