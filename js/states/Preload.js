@@ -124,6 +124,11 @@ Point.PreloadState = {
     this.load.image('keyfobUnlock', 'assets/images/keyfobUnlock.png');
     this.load.image('keyfobLock', 'assets/images/keyfobLock.png');
     this.load.image('rag2', 'assets/images/rag2.png');
+    this.load.image('testTitle', 'assets/images/testTitle.png');
+      
+    this.load.audio('testBackground', ['assets/audio/Point_and_Click_background.m4a', 'assets/audio/Point_and_Click_background.mp3', 'assets/audio/Point_and_Click_background.ogg']);
+    this.load.audio('rev', ['assets/audio/Point_and_Click_rev.m4a', 'assets/audio/Point_and_Click_rev.mp3', 'assets/audio/Point_and_Click_rev.ogg']);
+    this.load.audio('alarm', ['assets/audio/Point_and_Click_alarm.m4a', 'assets/audio/Point_and_Click_alarm.mp3', 'assets/audio/Point_and_Click_alarm.ogg']);
     //Data
     //Contains levels which each hold a level 0-2
       //Each level contains 4 rooms 0-3
@@ -139,6 +144,6 @@ Point.PreloadState = {
 
   },
   create: function() {
-    this.state.start('Test');
+    this.state.start('TestStory');
   }
 };

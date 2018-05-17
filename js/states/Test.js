@@ -3,7 +3,10 @@ var Point = Point || {};
 
 Point.TestState = {
   create: function() 
-  {  
+  {   
+      Point.Music = this.add.audio('testBackground');
+      Point.Music.play('', 0, 1, true);
+      
       this.add.sprite(0, 0, 'garage');
       this.goalText = this.add.text(350, 50, "Ugh, this truck is a mess.\nI think it might be yours.\nCan you check?", {font: '24px', fill: '#FFFFFF', align: 'center'});
       this.alertText = this.add.text(350, 50, "", {font: '24px', fill: '#FFFFFF', align: 'center'});
@@ -16,6 +19,8 @@ Point.TestState = {
       {
             if(this.stage === 4)
             {
+                var rev = this.add.audio('rev');
+                rev.play();
                 this.goalText.setText('Vroom');
                 console.log('Game Over');
             }
@@ -77,7 +82,8 @@ Point.TestState = {
       }, this);
       this.keyFobAlarm = this.add.button(33, 125, 'keyfobAlarm', function()
       {
-          //Alarm sound effect
+          var alarm = this.add.audio('alarm');
+          alarm.play();
           this.goalText.setText("Sounds like it's your truck. Now to get into it...");
           this.stage++;
       }, this);
@@ -179,6 +185,18 @@ Point.TestState = {
         waterEmitter.bounce.setTo(0.5, 0.5);
         waterEmitter.setXSpeed(100, 200);
         waterEmitter.setYSpeed(-50, 50);
+        waterEmitter.enableBody = true;
+        waterEmitter.inputEnableChildren = true;
+        waterEmitter.onChildInputDown.add(function(drop, pointer)
+        {
+            this.goalText.alpha=0;
+            this.alertText.setText('Ooo, pretty water');
+            this.game.time.events.add(Phaser.Timer.SECOND * 2, function()
+            {
+                this.alertText.setText('');
+                this.goalText.alpha=1;
+            }, this);
+        }, this);
         waterEmitter.makeParticles('waterParticle', 0, 5000, true, true);
       
         var keyEmitter = this.game.add.emitter(50, this.game.world.centerY - 200);
