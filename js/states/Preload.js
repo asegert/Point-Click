@@ -144,6 +144,6 @@ Point.PreloadState = {
 
   },
   create: function() {
-    this.state.start('TestStory');
+    this.state.start('Game');
   }
 };
